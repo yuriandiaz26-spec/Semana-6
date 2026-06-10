@@ -1,0 +1,18 @@
+{
+  "estado": "Datos recibidos",
+  "nombre": "Maria",
+  "mensaje": "Hola comunidad"
+}
+
+app.post('/incidencia', (req, res) => {
+
+  const tipo = req.body.tipo;
+  const descripcion = req.body.descripcion;
+
+  res.json({
+    mensaje: "Incidencia registrada",
+    tipo: tipo,
+    descripcion: descripcion
+  });
+
+});
